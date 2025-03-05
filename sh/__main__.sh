@@ -57,8 +57,15 @@ PYTHON_SCRIPT="$STEM"
 # echo $PYTHON_SCRIPT
 LOGFILE="./log/$STEM.log"
 # echo $LOGFILE
-rm $LOGFILE
-touch $LOGFILE
+
+# Ensure LOGFILE is set
+: "${LOGFILE:?LOGFILE variable is not set}"
+
+# Create parent directories if they don't exist
+mkdir -p "$(dirname "$LOGFILE")"
+
+# Create the file if it does not exist
+touch "$LOGFILE"
 
 # Enable logging to file if verbose mode is on
 if [ $VERBOSE -eq 1 ]; then

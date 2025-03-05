@@ -120,6 +120,7 @@ LOGFILE = BASEDIR / LOGFILE
 #     LOGFILE.unlink()
 
 if not LOGFILE.exists():
+    LOGFILE.parent.mkdir(parents=True, exist_ok=True)
     LOGFILE.touch()
 
 logging.captureWarnings(True)
