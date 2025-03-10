@@ -1,7 +1,7 @@
 __doc__ = """
 hw
 
-A skeleton of a Python command line application.
+A skeleton of a Python command line application. The documentation here is just a template.
 
 Version: 5.1.0
 Author: Russell Klein
