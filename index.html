@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  <!-- Defines character encoding (UTF-8 is universal) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Responsive design for mobile -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!-- Ensures Edge rendering mode in IE -->
+    <title>My Web Page</title>
+    <meta name="description" content="A brief and compelling description of your page (max 150-160 characters).">  
+    <meta name="keywords" content="HTML, CSS, JavaScript, web development, SEO">  
+    <meta name="author" content="Russell Klein">  
+    <meta name="robots" content="index, follow">  <!-- Allow search engines to index and follow links -->
+    <meta name="googlebot" content="index, follow">  <!-- Specifically for Googlebot -->
+    <meta name="bingbot" content="index, follow">  <!-- For Bingbot -->
+    <!-- Open Graph (Facebook & LinkedIn -->
+    <meta property="og:title" content="My Awesome Page">  
+    <meta property="og:description" content="A short description that appears when shared on Facebook or LinkedIn.">  
+    <meta property="og:image" content="https://example.com/image.jpg">  
+    <meta property="og:url" content="https://example.com">  
+    <meta property="og:type" content="website">  
+    <meta property="og:site_name" content="My Website">  
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">  
+    <meta name="twitter:title" content="My Awesome Page">  
+    <meta name="twitter:description" content="A short description for Twitter preview.">  
+    <meta name="twitter:image" content="https://example.com/image.jpg">  
+    <meta name="twitter:site" content="@YourTwitterHandle">  
+    <!-- Mobile & App Optimization -->
+    <!-- Apple iOS App -->
+    <meta name="apple-mobile-web-app-capable" content="yes">  <!-- Enables full-screen mode on iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">  
+    <meta name="apple-mobile-web-app-title" content="My App">  
+    <meta name="format-detection" content="telephone=no">  <!-- Prevents auto-detecting phone numbers as links -->
+    <!-- Android -->
+    <meta name="theme-color" content="#000000">  <!-- Changes the browser toolbar color on mobile -->
+    <!-- Faster Loading & Caching -->
+    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate">  <!-- Caching -->
+    <meta http-equiv="Expires" content="Wed, 21 Oct 2025 07:28:00 GMT">  <!-- Caching expiration -->
+    <!-- <meta http-equiv="refresh" content="5; url=https://example.com"> -->  <!-- Redirect after 5 seconds --> 
+    <!-- Content Security Policy -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';"> -->
+    <!-- Miscellaneous -->
+    <meta name="language" content="en">  
+    <meta name="referrer" content="no-referrer">  <!-- Prevents passing referrer information to other sites -->
+    <meta name="copyright" content="© 2025 Your Company">  
+    <meta name="application-name" content="My Web App">
+    <!-- Dublin Core (Useful for Librarians & Academics -->
+    <meta name="DC.title" content="My Research Paper">  
+    <meta name="DC.creator" content="John Doe">  
+    <meta name="DC.subject" content="Artificial Intelligence, Machine Learning">  
+    <meta name="DC.description" content="An academic research paper on AI.">  
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    -->
+    <!--
+    TODO: Make graphics file templates of all the appropriate sizes.
+
+    -->
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>');
+    </script>
+    -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- D3.js -->
+<!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
+<!-- <script>
+  if (!window.d3) {
+    document.write('<script src="/path/to/d3.v7.min.js"><\/script>');
+  }
+</script> -->
+<!-- End D3.js -->
+
+<!-- Plotly.js -->
+<!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+<!-- <script>
+  if (!window.Plotly) {
+    document.write('<script src="/path/to/plotly-latest.min.js"><\/script>');
+  }
+</script> -->
+<!-- End Plotly.js -->
+
+<!-- C3.js -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.css" rel="stylesheet"> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"></script> -->
+<!-- <script>
+  if (!window.c3) {
+    document.write('<script src="/path/to/c3.min.js"><\/script>');
+  }
+</script> -->
+<!-- End C3.js -->
+
+<!-- Three.js -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
+<!-- <script>
+  if (!window.THREE) {
+    document.write('<script src="/path/to/three.min.js"><\/script>');
+  }
+</script> -->
+<!-- End Three.js -->
+
+<!-- PixiJS -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.4.4/pixi.min.js"></script> -->
+<!-- <script>
+  if (!window.PIXI) {
+    document.write('<script src="/path/to/pixi.min.js"><\/script>');
+  }
+</script> -->
+<!-- End PixiJS -->
+
+<!-- Parsley.js -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"></script> -->
+<!-- <script>
+  if (!window.Parsley) {
+    document.write('<script src="/path/to/parsley.min.js"><\/script>');
+  }
+</script> -->
+<!-- End Parsley.js -->
+
+<!-- MobX -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/mobx@6.3.1/lib/mobx.umd.min.js"></script> -->
+<!-- <script>
+  if (!window.mobx) {
+    document.write('<script src="/path/to/mobx.umd.min.js"><\/script>');
+  }
+</script> -->
+<!-- End MobX -->
+
+<!-- Lodash -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script> -->
+<!-- <script>
+  if (!window._) {
+    document.write('<script src="/path/to/lodash.min.js"><\/script>');
+  }
+</script> -->
+<!-- End Lodash -->
+
+<!-- Day.js -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script> -->
+<!-- <script>
+  if (!window.dayjs) {
+    document.write('<script src="/path/to/dayjs.min.js"><\/script>');
+  }
+</script> -->
+<!-- End Day.js -->
+
+<!-- Jasmine -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/jasmine.min.js"></script> -->
+<!-- <script>
+  if (!window.jasmine) {
+    document.write('<script src="/path/to/jasmine.min.js"><\/script>');
+  }
+</script> -->
+<!-- End Jasmine -->
+
+<!-- ESLint -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/eslint/8.23.0/eslint.min.js"></script> -->
+<!-- <script>
+  if (!window.ESLint) {
+    document.write('<script src="/path/to/eslint.min.js"><\/script>');
+  }
+</script> -->
+<!-- End ESLint -->
+
+<!-- Socket.io -->
+<!-- <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script> -->
+<!-- <script>
+  if (!window.io) {
+    document.write('<script src="/path/to/socket.io.min.js"><\/script>');
+  }
+</script> -->
+<!-- End Socket.io -->
+
+<!-- Quill -->
+<!-- <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet"> -->
+<!-- <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script> -->
+<!-- <script>
+  if (!window.Quill) {
+    document.write('<script src="/path/to/quill.min.js"><\/script>');
+  }
+</script> -->
+<!-- End Quill -->
+
+<!-- Leaflet -->
+<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" /> -->
+<!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> -->
+<!-- <script>
+  if (!window.L) {
+    document.write('<script src="/path/to/leaflet.js"><\/script>');
+  }
+</script> -->
+<!-- End Leaflet -->
+
+<!-- MathQuill -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js"></script> -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css" rel="stylesheet"> -->
+<!-- <script>
+  if (!window.MathQuill) {
+    document.write('<script src="/path/to/mathquill.min.js"><\/script>');
+  }
+</script> -->
+<!-- End MathQuill -->
+
+<!-- MathJax -->
+<!-- <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<!-- <script>
+  if (!window.MathJax) {
+    document.write('<script src="/path/to/MathJax.js?config=TeX-MML-AM_CHTML"><\/script>');
+  }
+</script> -->
+<!-- End MathJax -->
+
+    
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <div id="output"></div>
+    <button id="loadBtn">Load Content</button>
+    <script src="js/script.js"></script>
+</body>
+</html>

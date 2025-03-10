@@ -114,7 +114,6 @@ if not LOGFILE:
 # if VERBOSE:
 #     print(f'{LOGFILE=}')
 
-BASEDIR = Path(BASEDIR)
 LOGFILE = BASEDIR / LOGFILE
 # if LOGFILE.exists():
 #     LOGFILE.unlink()
