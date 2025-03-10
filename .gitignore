@@ -1,6 +1,7 @@
 *.ipynb
 archive/*
 log/*
+output.txt
 
 
 
