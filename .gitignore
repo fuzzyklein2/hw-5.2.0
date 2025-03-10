@@ -1,4 +1,7 @@
 *.ipynb
+archive/*
+log/*
+
 
 
 # Byte-compiled / optimized / DLL files
