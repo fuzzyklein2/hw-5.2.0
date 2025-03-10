@@ -1,5 +1,8 @@
-from .startup import *
-
+if __package__:
+    from .startup import *
+else:
+    from startup import *
+    
 class Program():
     """ Abstract class that processes command line arguments as files. """
 

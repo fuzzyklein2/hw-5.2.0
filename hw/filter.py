@@ -1,7 +1,11 @@
 from pathlib import Path
 
-from .startup import *  # Imports the pre-processed command-line arguments
-from .program import Program
+if __name__ == '__main__':
+    from startup import *
+    from program import Program
+else:
+    from .startup import *  # Imports the pre-processed command-line arguments
+    from .program import Program
 
 class Filter(Program):
     def __init__(self, *args, **kwargs):
