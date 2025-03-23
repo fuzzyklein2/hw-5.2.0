@@ -1,0 +1,110 @@
+$ python3 -O -v hw/errors.py
+import _frozen_importlib # frozen
+import _imp # builtin
+import '_thread' # <class '_frozen_importlib.BuiltinImporter'>
+import '_warnings' # <class '_frozen_importlib.BuiltinImporter'>
+import '_weakref' # <class '_frozen_importlib.BuiltinImporter'>
+import '_io' # <class '_frozen_importlib.BuiltinImporter'>
+import 'marshal' # <class '_frozen_importlib.BuiltinImporter'>
+import 'posix' # <class '_frozen_importlib.BuiltinImporter'>
+import '_frozen_importlib_external' # <class '_frozen_importlib.FrozenImporter'>
+# installing zipimport hook
+import 'time' # <class '_frozen_importlib.BuiltinImporter'>
+import 'zipimport' # <class '_frozen_importlib.FrozenImporter'>
+# installed zipimport hook
+# /home/fuzzy/python-3.13.2/lib/python3.13/encodings/__pycache__/__init__.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/encodings/__init__.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/encodings/__pycache__/__init__.cpython-313.opt-1.pyc'
+import '_codecs' # <class '_frozen_importlib.BuiltinImporter'>
+import 'codecs' # <class '_frozen_importlib.FrozenImporter'>
+# /home/fuzzy/python-3.13.2/lib/python3.13/encodings/__pycache__/aliases.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/encodings/aliases.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/encodings/__pycache__/aliases.cpython-313.opt-1.pyc'
+import 'encodings.aliases' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0bba210>
+import 'encodings' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0b352b0>
+# /home/fuzzy/python-3.13.2/lib/python3.13/encodings/__pycache__/utf_8.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/encodings/utf_8.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/encodings/__pycache__/utf_8.cpython-313.opt-1.pyc'
+import 'encodings.utf_8' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0bba350>
+import '_signal' # <class '_frozen_importlib.BuiltinImporter'>
+import '_abc' # <class '_frozen_importlib.BuiltinImporter'>
+import 'abc' # <class '_frozen_importlib.FrozenImporter'>
+import 'io' # <class '_frozen_importlib.FrozenImporter'>
+import '_stat' # <class '_frozen_importlib.BuiltinImporter'>
+import 'stat' # <class '_frozen_importlib.FrozenImporter'>
+import '_collections_abc' # <class '_frozen_importlib.FrozenImporter'>
+import 'errno' # <class '_frozen_importlib.BuiltinImporter'>
+import 'genericpath' # <class '_frozen_importlib.FrozenImporter'>
+import 'posixpath' # <class '_frozen_importlib.FrozenImporter'>
+import 'os' # <class '_frozen_importlib.FrozenImporter'>
+import '_sitebuiltins' # <class '_frozen_importlib.FrozenImporter'>
+Processing user site-packages
+Processing global site-packages
+Adding directory: '/home/fuzzy/python-3.13.2/lib/python3.13/site-packages'
+Processing .pth file: '/home/fuzzy/python-3.13.2/lib/python3.13/site-packages/distutils-precedence.pth'
+# /home/fuzzy/python-3.13.2/lib/python3.13/encodings/__pycache__/utf_8_sig.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/encodings/utf_8_sig.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/encodings/__pycache__/utf_8_sig.cpython-313.opt-1.pyc'
+import 'encodings.utf_8_sig' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0ba62c0>
+# /home/fuzzy/python-3.13.2/lib/python3.13/site-packages/_distutils_hack/__pycache__/__init__.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/site-packages/_distutils_hack/__init__.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/site-packages/_distutils_hack/__pycache__/__init__.cpython-313.opt-1.pyc'
+import '_distutils_hack' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0ba7360>
+import 'site' # <class '_frozen_importlib.FrozenImporter'>
+Python 3.13.2 (main, Feb 10 2025, 05:33:06) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+# /home/fuzzy/python-3.13.2/lib/python3.13/tkinter/__pycache__/__init__.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/tkinter/__init__.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/tkinter/__pycache__/__init__.cpython-313.opt-1.pyc'
+# /home/fuzzy/python-3.13.2/lib/python3.13/collections/__pycache__/__init__.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/collections/__init__.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/collections/__pycache__/__init__.cpython-313.opt-1.pyc'
+import 'itertools' # <class '_frozen_importlib.BuiltinImporter'>
+# /home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/keyword.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/keyword.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/keyword.cpython-313.opt-1.pyc'
+import 'keyword' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0ae3550>
+# /home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/operator.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/operator.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/operator.cpython-313.opt-1.pyc'
+import '_operator' # <class '_frozen_importlib.BuiltinImporter'>
+import 'operator' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0ae3e50>
+# /home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/reprlib.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/reprlib.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/reprlib.cpython-313.opt-1.pyc'
+import 'reprlib' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b08c5d60>
+import '_collections' # <class '_frozen_importlib.BuiltinImporter'>
+import 'collections' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0a61480>
+# /home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/enum.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/enum.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/enum.cpython-313.opt-1.pyc'
+# /home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/functools.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/functools.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/functools.cpython-313.opt-1.pyc'
+import '_functools' # <class '_frozen_importlib.BuiltinImporter'>
+import 'functools' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b090c910>
+# /home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/types.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/types.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/types.cpython-313.opt-1.pyc'
+import 'types' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b090c9f0>
+import 'enum' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0a518b0>
+# extension module '_tkinter' loaded from '/home/fuzzy/python-3.13.2/lib/python3.13/lib-dynload/_tkinter.cpython-313-x86_64-linux-gnu.so'
+# extension module '_tkinter' executed from '/home/fuzzy/python-3.13.2/lib/python3.13/lib-dynload/_tkinter.cpython-313-x86_64-linux-gnu.so'
+import '_tkinter' # <_frozen_importlib_external.ExtensionFileLoader object at 0x72b7b08f5e80>
+# /home/fuzzy/python-3.13.2/lib/python3.13/tkinter/__pycache__/constants.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/tkinter/constants.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/tkinter/__pycache__/constants.cpython-313.opt-1.pyc'
+import 'tkinter.constants' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0beb520>
+# /home/fuzzy/python-3.13.2/lib/python3.13/re/__pycache__/__init__.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/re/__init__.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/re/__pycache__/__init__.cpython-313.opt-1.pyc'
+# /home/fuzzy/python-3.13.2/lib/python3.13/re/__pycache__/_compiler.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/re/_compiler.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/re/__pycache__/_compiler.cpython-313.opt-1.pyc'
+import '_sre' # <class '_frozen_importlib.BuiltinImporter'>
+# /home/fuzzy/python-3.13.2/lib/python3.13/re/__pycache__/_parser.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/re/_parser.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/re/__pycache__/_parser.cpython-313.opt-1.pyc'
+# /home/fuzzy/python-3.13.2/lib/python3.13/re/__pycache__/_constants.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/re/_constants.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/re/__pycache__/_constants.cpython-313.opt-1.pyc'
+import 're._constants' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0b57d80>
+import 're._parser' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0ac4aa0>
+# /home/fuzzy/python-3.13.2/lib/python3.13/re/__pycache__/_casefix.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/re/_casefix.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/re/__pycache__/_casefix.cpython-313.opt-1.pyc'
+import 're._casefix' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b09689b0>
+import 're._compiler' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0b47f50>
+# /home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/copyreg.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/copyreg.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/__pycache__/copyreg.cpython-313.opt-1.pyc'
+import 'copyreg' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b096adf0>
+import 're' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0b47d10>
+import 'tkinter' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0a605a0>
+# /home/fuzzy/python-3.13.2/lib/python3.13/tkinter/__pycache__/messagebox.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/tkinter/messagebox.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/tkinter/__pycache__/messagebox.cpython-313.opt-1.pyc'
+# /home/fuzzy/python-3.13.2/lib/python3.13/tkinter/__pycache__/commondialog.cpython-313.opt-1.pyc matches /home/fuzzy/python-3.13.2/lib/python3.13/tkinter/commondialog.py
+# code object from '/home/fuzzy/python-3.13.2/lib/python3.13/tkinter/__pycache__/commondialog.cpython-313.opt-1.pyc'
+import 'tkinter.commondialog' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0af6f50>
+import 'tkinter.messagebox' # <_frozen_importlib_external.SourceFileLoader object at 0x72b7b0b5ac30>
+Segmentation fault (core dumped)
