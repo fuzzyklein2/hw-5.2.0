@@ -27,11 +27,36 @@ def show_error_dialog():
     button_frame = tk.Frame(frame)
     button_frame.pack()
     
-    tk.Button(button_frame, text="OK", command=root.destroy).pack(side=tk.LEFT, padx=5)
-    tk.Button(button_frame, text="Cancel", command=root.destroy).pack(side=tk.LEFT, padx=5)
+    tk.Button(button_frame, text="OK", command=root.destroy, fg="yellow").pack(side=tk.LEFT, padx=5)
+    tk.Button(button_frame, text="Cancel", command=root.destroy, fg="green").pack(side=tk.LEFT, padx=5)
     tk.Button(button_frame, text="Debug", command=root.destroy, fg="red").pack(side=tk.LEFT, padx=5)
     
     root.mainloop()
+
+class Error(Exception):
+    """Custom exception with additional attributes for UI-related error handling."""
+    
+    def __init__(self, message, code=None, title=None, icon=None, buttons=None, **kwargs):
+        super().__init__(message)
+        self.code = code  # Optional error code
+        self.title = title  # Title of the error message
+        self.icon = icon  # Icon representing the error
+        self.buttons = buttons  # Buttons available in the error dialog
+        self.extra = kwargs  # Store any additional keyword arguments
+
+    def __str__(self):
+        details = f"[Error {self.code}] " if self.code else ""
+        details += super().__str__()
+        if self.title:
+            details = f"{self.title}: {details}"
+        return details
+
+# Example usage
+# try:
+#     raise Error("File not found!", code=404, title="File Error", icon="warning", buttons=["OK", "Retry"])
+# except Error as e:
+#     print(e)
+#     print(f"Title: {e.title}, Icon: {e.icon}, Buttons: {e.buttons}, Extra: {e.extra}")
 
 if __name__ == "__main__":
     if DEBUG:
