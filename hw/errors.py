@@ -1,3 +1,4 @@
+from pathlib import Path
 import sys
 import tkinter as tk
 from tkinter import messagebox
@@ -5,33 +6,14 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 
 DEBUG = '-d' in sys.argv
+TESTING = '-t' in sys.argv
+try:
+    from __init__ import BASEDIR, log
+except:
+    BASEDIR = Path(__file__).parent.parent
 
-def show_error_dialog():
-    if DEBUG:
-        breakpoint()
-        print(f"Debugging {__file__}")
-    root = tk.Tk()
-    root.title("Danger, Will Robinson! :O")
-    root.geometry("400x150")
-    root.resizable(False, False)
-    
-    frame = tk.Frame(root, padx=20, pady=20)
-    frame.pack()
-    
-    stop_icon = tk.Label(frame, text="", font=("Arial", 24))
-    stop_icon.pack()
-    
-    message_label = tk.Label(frame, text="System SQL Error: Database Unrecoverable!", font=("Arial", 12), wraplength=350)
-    message_label.pack(pady=10)
-    
-    button_frame = tk.Frame(frame)
-    button_frame.pack()
-    
-    tk.Button(button_frame, text="OK", command=root.destroy, fg="yellow").pack(side=tk.LEFT, padx=5)
-    tk.Button(button_frame, text="Cancel", command=root.destroy, fg="green").pack(side=tk.LEFT, padx=5)
-    tk.Button(button_frame, text="Debug", command=root.destroy, fg="red").pack(side=tk.LEFT, padx=5)
-    
-    root.mainloop()
+if DEBUG:
+    print(f'{BASEDIR=}')
 
 class Error(Exception):
     """Custom exception with additional attributes for UI-related error handling."""
@@ -43,6 +25,9 @@ class Error(Exception):
         self.icon = icon  # Icon representing the error
         self.buttons = buttons  # Buttons available in the error dialog
         self.extra = kwargs  # Store any additional keyword arguments
+        self.message = message
+        self.buttons_loaded = False
+        self.choice = None
 
     def __str__(self):
         details = f"[Error {self.code}] " if self.code else ""
@@ -51,17 +36,76 @@ class Error(Exception):
             details = f"{self.title}: {details}"
         return details
 
-# Example usage
-# try:
-#     raise Error("File not found!", code=404, title="File Error", icon="warning", buttons=["OK", "Retry"])
-# except Error as e:
-#     print(e)
-#     print(f"Title: {e.title}, Icon: {e.icon}, Buttons: {e.buttons}, Extra: {e.extra}")
+    def on_button_click(self, choice):
+        print(f'Button clicked: {choice}')
+        self.choice = choice
+        self.root.destroy()
+
+    def get_clicked_button(self):
+        print(f'Button clicked: {self.choice}') 
+        self.root.destroy()
+
+    def show(self):
+        if DEBUG:
+            breakpoint()
+            print(f"Debugging {__file__}")
+        self.root = tk.Tk()
+        self.root.title(self.title)
+        self.root.geometry("400x175")
+        self.root.resizable(False, False)
+        
+        frame = tk.Frame(self.root, padx=20, pady=20)
+        frame.pack()
+
+        if DEBUG:
+            breakpoint()
+
+        try:
+            image = Image.open(self.icon)  # Replace with the path to your image
+            image = image.resize((50, 50), Image.LANCZOS)
+            img = ImageTk.PhotoImage(image)
+            img_label = tk.Label(frame, image=img)
+            img_label.pack()
+        except Exception as e:
+            print(f"Error loading image: {self.icon}")
+            warn(f"Error loading image: {self.icon}")
+
+            # stop_icon = tk.Label(frame, text=self.icon, font=("Arial", 24))
+            # stop_icon.pack()
+        
+        message_label = tk.Label(frame, text=f"Code {self.code} Error: {self.message}", font=("Arial", 12), wraplength=350)
+        message_label.pack(pady=10)
+        
+        button_frame = tk.Frame(frame)
+        button_frame.pack()
+        
+        for b in self.buttons:
+            tk.Button(button_frame, text=b, command=lambda b=b: self.on_button_click(b)).pack(side=tk.RIGHT, padx=5)
+        self.buttons_loaded = True;
+        self.root.mainloop()
+        # self.root.destroy()
 
 if __name__ == "__main__":
-    if DEBUG:
-        from PIL import Image, ImageTk
+# Example usage
+    try:
+        # Load and display the image
+        image = None
+        try:
+            image = Image.open(str(BASEDIR / "img/stop.png"))  # Replace with the path to your image
+            image = image.resize((50, 50), Image.LANCZOS)
+            img = ImageTk.PhotoImage(image)
+            img_label = tk.Label(frame, image=img)
+            img_label.pack()
+        except Exception as e:
+            print(f"Error loading image: {e}")
+        raise Error("File not found!", code=404, title="File Error", icon=str(BASEDIR / "img/stop.png"), buttons=["OK", "Retry"])
+    except Error as e:
+        print(e)
+        print(f"Title: {e.title}, Icon: {e.icon}, Buttons: {e.buttons}, Extra: {e.extra}")
+        e.show()
         
+    
+    if TESTING:
         def on_button_click(choice):
             print(f'Button clicked: {choice}')
             root.destroy()
@@ -76,7 +120,7 @@ if __name__ == "__main__":
         
         # Load and display the image
         try:
-            image = Image.open("../img/stop.png")  # Replace with the path to your image
+            image = Image.open(str(BASEDIR / "img/stop.png"))  # Replace with the path to your image
             image = image.resize((50, 50), Image.LANCZOS)
             img = ImageTk.PhotoImage(image)
             img_label = tk.Label(frame, image=img)
@@ -97,6 +141,6 @@ if __name__ == "__main__":
         tk.Button(buttons_frame, text="OH, FUCK!", fg="red", command=lambda: on_button_click("OH, FUCK!")).pack(side=tk.LEFT, padx=5)
         
         root.mainloop()
-    else:
-        breakpoint()
-        show_error_dialog()
+    # else:
+    #     breakpoint()
+    #     show_error_dialog()

@@ -24,4 +24,5 @@ class Driver(Cmd, Filter):
         # Handle responses
         return response
 
-    def do_ask(self, args)
+    def do_ask(self, args):
+        pass
