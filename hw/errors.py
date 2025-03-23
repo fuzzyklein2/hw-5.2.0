@@ -89,15 +89,15 @@ if __name__ == "__main__":
 # Example usage
     try:
         # Load and display the image
-        image = None
-        try:
-            image = Image.open(str(BASEDIR / "img/stop.png"))  # Replace with the path to your image
-            image = image.resize((50, 50), Image.LANCZOS)
-            img = ImageTk.PhotoImage(image)
-            img_label = tk.Label(frame, image=img)
-            img_label.pack()
-        except Exception as e:
-            print(f"Error loading image: {e}")
+        # image = None
+        # try:
+        #     image = Image.open(str(BASEDIR / "img/stop.png"))  # Replace with the path to your image
+        #     image = image.resize((50, 50), Image.LANCZOS)
+        #     img = ImageTk.PhotoImage(image)
+        #     img_label = tk.Label(frame, image=img)
+        #     img_label.pack()
+        # except Exception as e:
+        #     print(f"Error loading image: {e}")
         raise Error("File not found!", code=404, title="File Error", icon=str(BASEDIR / "img/stop.png"), buttons=["OK", "Retry"])
     except Error as e:
         print(e)
